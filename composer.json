@@ -69,9 +69,7 @@
             "composer normalize"
         ],
         "release:build": [
-            "rm -fr vendor",
-            "composer install --no-dev --prefer-dist --optimize-autoloader --no-suggest",
-            "rm -fr release wordpress",
+            "rm -fr vendor release",
             "composer archive --format=zip --dir=release --file=crop-thumbnails-cdn-cache-busting"
         ],
         "style:check": "phpcs",
