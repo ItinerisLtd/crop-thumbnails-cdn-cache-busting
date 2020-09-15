@@ -39,4 +39,4 @@ add_filter('crop_thumbnails_filename', function (string $fileName, $file, $width
         $date->getTimestamp(),
         $extension
     );
-}, -10, 4);
+}, -10, 5);
