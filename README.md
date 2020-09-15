@@ -18,7 +18,7 @@
 </div>
 
 <p align="center">
-  <strong>Bust CDN caches after cropping thumbnails. Requires the Crop <a href="https://wordpress.org/plugins/crop-thumbnails/">Crop-Thumbnails</a> plugin.</strong>
+  <strong>Bust CDN caches after cropping thumbnails. Requires the <a href="https://wordpress.org/plugins/crop-thumbnails/">Crop-Thumbnails</a> plugin.</strong>
   <br />
   <br />
   Built with ♥ by <a href="https://www.itineris.co.uk/">Itineris</a>
