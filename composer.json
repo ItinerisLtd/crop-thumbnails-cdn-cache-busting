@@ -1,0 +1,85 @@
+{
+    "name": "itinerisltd/crop-thumbnails-cdn-cache-busting",
+    "type": "wordpress-plugin",
+    "description": "Bust CDN caches after cropping thumbnails. Requires the Crop-Thumbnails plugin.",
+    "keywords": [
+        "cache",
+        "cdn",
+        "crop-thumbnails",
+        "wordpress",
+        "wp"
+    ],
+    "homepage": "https://github.com/ItinerisLtd/crop-thumbnails-cdn-cache-busting",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Itineris Limited",
+            "email": "dev@itineris.co.uk",
+            "homepage": "https://itineris.co.uk/",
+            "role": "Company"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://typist.tech/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "conflict": {
+        "itinerisltd/crop-thumbnails-cache-busting": "*",
+        "itinerisltd/wp-offload-media-crop-thumbnails-cdn-cache-busting": "*"
+    },
+    "require-dev": {
+        "itinerisltd/itineris-wp-coding-standards": "^0.4.0",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "roave/security-advisories": "dev-master"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Itineris\\CropThumbnails\\CDN\\CacheBusting\\": "src/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "*",
+            "!*LICENSE*",
+            "!*.php",
+            "!/README.txt",
+            "!src",
+            "test",
+            "tests"
+        ]
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "pretag": [
+            "composer update",
+            "@style:check",
+            "composer normalize"
+        ],
+        "release:build": [
+            "rm -fr vendor",
+            "composer install --no-dev --prefer-dist --optimize-autoloader --no-suggest",
+            "rm -fr release wordpress",
+            "composer archive --format=zip --dir=release --file=crop-thumbnails-cdn-cache-busting"
+        ],
+        "style:check": "phpcs",
+        "style:fix": "phpcbf"
+    },
+    "support": {
+        "email": "dev@itineris.co.uk",
+        "issues": "https://github.com/ItinerisLtd/crop-thumbnails-cdn-cache-busting/issues",
+        "source": "https://github.com/ItinerisLtd/crop-thumbnails-cdn-cache-busting"
+    }
+}
