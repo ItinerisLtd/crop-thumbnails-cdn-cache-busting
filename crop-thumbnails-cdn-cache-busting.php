@@ -4,7 +4,7 @@
  * Plugin Name:       Crop Thumbnails CDN Cache Busting
  * Plugin URI:        https://github.com/ItinerisLtd/crop-thumbnails-cdn-cache-busting
  * Description:       Bust CDN caches after cropping thumbnails. Requires the <a href="https://wordpress.org/plugins/crop-thumbnails/">Crop-Thumbnails</a> plugin.
- * Version:           0.1.1
+ * Version:           0.1.2
  * Requires at least: 5.5.1
  * Requires PHP:      7.2
  * Author:            Itineris Limited
