@@ -29,6 +29,7 @@
         "php": "^7.2"
     },
     "conflict": {
+        "deliciousbrains-plugin/wp-offload-media": "*",
         "itinerisltd/crop-thumbnails-cache-busting": "*",
         "itinerisltd/wp-offload-media-crop-thumbnails-cdn-cache-busting": "*"
     },
