@@ -25,18 +25,24 @@ if (! defined('WPINC')) {
     die;
 }
 
-add_filter('crop_thumbnails_filename', function (string $fileName, $file, $width, $height, bool $crop): string {
-    if (! $crop) {
-        return $fileName;
-    }
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 
-    $extension = pathinfo($fileName, PATHINFO_EXTENSION);
-    $date = new DateTimeImmutable();
+//Plugin::run();
 
-    return sprintf(
-        '%s-%s.%s',
-        rtrim($fileName, '.' . $extension),
-        $date->getTimestamp(),
-        $extension
-    );
-}, -10, 5);
+//add_filter('crop_thumbnails_filename', function (string $fileName, $file, $width, $height, bool $crop): string {
+//    if (! $crop) {
+//        return $fileName;
+//    }
+//
+//    $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+//    $date = new DateTimeImmutable();
+//
+//    return sprintf(
+//        '%s-%s.%s',
+//        rtrim($fileName, '.' . $extension),
+//        $date->getTimestamp(),
+//        $extension
+//    );
+//}, -10, 5);
