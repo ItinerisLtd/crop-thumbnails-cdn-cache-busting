@@ -26,7 +26,7 @@
         }
     ],
     "require": {
-        "php": "^7.2"
+        "php": "^7.4 || ^8.0"
     },
     "conflict": {
         "deliciousbrains-plugin/wp-offload-media": "*",
@@ -34,12 +34,15 @@
         "itinerisltd/wp-offload-media-crop-thumbnails-cdn-cache-busting": "*"
     },
     "require-dev": {
-        "itinerisltd/itineris-wp-coding-standards": "^0.4.0",
+        "itinerisltd/itineris-wp-coding-standards": "^0.4.1",
         "phpcompatibility/php-compatibility": "^9.3",
         "roave/security-advisories": "dev-master"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "extra": {
         "branch-alias": {
